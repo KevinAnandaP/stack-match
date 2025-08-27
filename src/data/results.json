@@ -1,0 +1,114 @@
+[
+  {
+    "id": "react",
+    "name": "React.js",
+    "title": "You are a React Developer!",
+    "description": "You love building interactive and modern UIs. Component-based thinking, virtual DOM, and a rich ecosystem make you feel at home. You're the type who likes to move fast, iterate quickly, and create smooth user experiences. JSX is life!",
+    "traits": [
+      "Component-based thinker",
+      "UI/UX focused",
+      "Fast iteration lover",
+      "Modern web enthusiast"
+    ],
+    "techStack": ["React", "Next.js", "TailwindCSS", "TypeScript"],
+    "logoUrl": "/logos/react.png"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "title": "You are a Node.js Developer!",
+    "description": "JavaScript everywhere! You love building APIs, microservices, and real-time applications. Non-blocking I/O and the massive NPM ecosystem make you productive. Full-stack with one language is incredibly powerful!",
+    "traits": [
+      "Full-stack oriented",
+      "API & backend lover",
+      "NPM ecosystem expert",
+      "JavaScript purist"
+    ],
+    "techStack": ["Node.js", "Express", "MongoDB", "Socket.io"],
+    "logoUrl": "/logos/nodejs.png"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "title": "You are a Python Developer!",
+    "description": "Simplicity is the ultimate sophistication! You love clean syntax, readable code, and Python's versatility. From web dev to AI/ML, you can handle everything. 'Import this' is your life philosophy.",
+    "traits": [
+      "Clean code advocate",
+      "Versatile problem solver",
+      "Data science curious",
+      "Rapid prototyper"
+    ],
+    "techStack": ["Python", "Django/Flask", "Pandas", "TensorFlow"],
+    "logoUrl": "/logos/python.png"
+  },
+  {
+    "id": "go",
+    "name": "Go",
+    "title": "You are a Go Developer!",
+    "description": "Simple, fast, reliable. You appreciate minimalism and performance. Concurrency with goroutines, fast compilation, and easy deployment make you happy. Less is more is your mantra.",
+    "traits": [
+      "Performance focused",
+      "Simplicity lover",
+      "Concurrency expert",
+      "System thinking"
+    ],
+    "techStack": ["Go", "Gin/Echo", "Docker", "Kubernetes"],
+    "logoUrl": "/logos/go.png"
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "title": "You are a Java Developer!",
+    "description": "Enterprise-grade, battle-tested, write once run anywhere. You love clear structure, OOP principles, and a mature ecosystem. The rich JVM ecosystem and backward compatibility make you comfortable with long-term projects.",
+    "traits": [
+      "Enterprise mindset",
+      "OOP expert",
+      "Architecture focused",
+      "Long-term thinker"
+    ],
+    "techStack": ["Java", "Spring Boot", "Maven", "PostgreSQL"],
+    "logoUrl": "/logos/java.png"
+  },
+  {
+    "id": "rust",
+    "name": "Rust",
+    "title": "You are a Rust Developer!",
+    "description": "Memory safety without garbage collection! You love high performance with safety guarantees. The unique ownership model and zero-cost abstractions excite you. Fearless concurrency is your goal.",
+    "traits": [
+      "Performance obsessed",
+      "Safety conscious",
+      "System programming lover",
+      "Innovation seeker"
+    ],
+    "techStack": ["Rust", "Actix/Warp", "Tokio", "Cargo"],
+    "logoUrl": "/logos/rust.png"
+  },
+  {
+    "id": "vue",
+    "name": "Vue.js",
+    "title": "You are a Vue.js Developer!",
+    "description": "Progressive framework that's approachable! You love a gentle learning curve that's powerful when needed. Familiar template syntax and elegant reactivity system make development enjoyable.",
+    "traits": [
+      "Progressive thinker",
+      "Developer experience focused",
+      "Template lover",
+      "Gentle learning advocate"
+    ],
+    "techStack": ["Vue.js", "Nuxt.js", "Vuetify", "Pinia"],
+    "logoUrl": "/logos/vue.png"
+  },
+  {
+    "id": "csharp",
+    "name": "C#",
+    "title": "You are a C# Developer!",
+    "description": "Strongly-typed, object-oriented, and feature-rich. You love the comprehensive .NET ecosystem and excellent tooling. Cross-platform capabilities and solid performance make you confident for various projects.",
+    "traits": [
+      "Type safety lover",
+      "Microsoft ecosystem fan",
+      "Enterprise ready",
+      "Cross-platform believer"
+    ],
+    "techStack": ["C#", ".NET Core", "ASP.NET", "Entity Framework"],
+    "logoUrl": "/logos/csharp.png"
+  }
+]

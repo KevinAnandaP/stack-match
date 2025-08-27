@@ -1,103 +1,202 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import SplashScreen from '@/components/SplashScreen';
+import PageTransition from '@/components/PageTransition';
+import FloatingParticles from '@/components/FloatingParticles';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [showSplash, setShowSplash] = useState(true);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  if (showSplash) {
+    return <SplashScreen onComplete={() => setShowSplash(false)} />;
+  }
+  
+  return (
+    <PageTransition>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative w-full h-screen bg-[#1c1a5e] overflow-hidden"
+      >
+        {/* Floating Particles */}
+        <FloatingParticles count={30} />
+
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0">
+          <Image
+            src="/vector-atas.png"
+            alt="Vector decoration"
+            width={420}
+            height={280}
+            className="opacity-20"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        
+        <div className="absolute bottom-0 left-0">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/vector-bawah.png"
+            alt="Vector decoration"
+            width={420}
+            height={280}
+            className="opacity-20"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+
+        {/* Main content */}
+        <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
+          <div className="flex flex-col items-center gap-5 text-center">
+            <h1 className="text-6xl font-semibold text-white tracking-normal">
+              Stack Match
+            </h1>
+            
+            <p className="text-2xl font-normal text-white max-w-3xl leading-normal">
+              Curious about which tech stack matches your coding style?
+              <br />
+              Take the quiz and find out!
+            </p>
+          </div>
+        </div>
+
+        {/* Tech stack logos grid */}
+        <div className="absolute top-[380px] left-1/2 transform -translate-x-1/2">
+          <div className="grid grid-cols-3 gap-8 max-w-4xl">
+            {/* Row 1 */}
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="w-[180px] h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <Image
+                src="/react.png"
+                alt="React"
+                width={70}
+                height={70}
+                className="object-contain relative z-10"
+              />
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="w-[180px] h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <Image
+                src="/python.png"
+                alt="Python"
+                width={70}
+                height={70}
+                className="object-contain relative z-10"
+              />
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="w-[180px] h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <Image
+                src="/rust.svg"
+                alt="Rust"
+                width={70}
+                height={70}
+                className="object-contain relative z-10"
+              />
+            </motion.div>
+
+            {/* Row 2 */}
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="w-[180px] h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <Image
+                src="/java.png"
+                alt="Java"
+                width={70}
+                height={70}
+                className="object-contain relative z-10"
+              />
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="w-[180px] h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <Image
+                src="/golang.svg"
+                alt="Go"
+                width={70}
+                height={70}
+                className="object-contain relative z-10"
+              />
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+              }}
+              transition={{ duration: 0.3 }}
+              className="w-[180px] h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <Image
+                src="/nodejs.png"
+                alt="Node.js"
+                width={70}
+                height={70}
+                className="object-contain relative z-10"
+              />
+            </motion.div>
+          </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="absolute bottom-[100px] left-1/2 transform -translate-x-1/2">
+          <Link href="/quiz">
+            <motion.div 
+              whileHover={{ 
+                scale: 1.05, 
+                backgroundColor: "rgba(255,255,255,0.15)",
+                boxShadow: "0 20px 50px rgba(139, 92, 246, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md border border-white/30 rounded-[20px] px-20 py-5 inline-flex items-center justify-center cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+            >
+              <span className="text-2xl font-semibold text-white text-center relative z-10">
+                Start Quiz
+              </span>
+            </motion.div>
+          </Link>
+        </div>
+      </motion.div>
+    </PageTransition>
   );
 }

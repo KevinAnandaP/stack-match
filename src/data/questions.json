@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "question": "What's your preferred coding environment?",
+    "answers": [
+      {
+        "text": "Browser DevTools",
+        "points": { "react": 2, "nodejs": 1, "vue": 1 }
+      },
+      {
+        "text": "Terminal/CLI",
+        "points": { "go": 2, "rust": 2, "python": 1 }
+      },
+      {
+        "text": "IDE with GUI",
+        "points": { "java": 2, "csharp": 1, "kotlin": 1 }
+      },
+      {
+        "text": "Jupyter Notebooks",
+        "points": { "python": 2, "r": 1, "julia": 1 }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "How do you handle errors?",
+    "answers": [
+      {
+        "text": "Try-catch blocks",
+        "points": { "java": 2, "nodejs": 1, "python": 1 }
+      },
+      {
+        "text": "Result types",
+        "points": { "rust": 2, "go": 2, "swift": 1 }
+      },
+      {
+        "text": "Console logging",
+        "points": { "react": 2, "nodejs": 2, "vue": 1 }
+      },
+      {
+        "text": "Unit testing",
+        "points": { "go": 1, "rust": 1, "java": 1 }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What motivates you most?",
+    "answers": [
+      {
+        "text": "User experience",
+        "points": { "react": 2, "vue": 2, "svelte": 1 }
+      },
+      {
+        "text": "Performance",
+        "points": { "rust": 2, "go": 2, "cpp": 1 }
+      },
+      {
+        "text": "Scalability",
+        "points": { "java": 2, "go": 1, "nodejs": 1 }
+      },
+      {
+        "text": "Data insights",
+        "points": { "python": 2, "r": 2, "julia": 1 }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Your ideal project size?",
+    "answers": [
+      {
+        "text": "Quick prototypes",
+        "points": { "python": 2, "nodejs": 2, "react": 1 }
+      },
+      {
+        "text": "Enterprise apps",
+        "points": { "java": 2, "csharp": 2, "kotlin": 1 }
+      },
+      {
+        "text": "System tools",
+        "points": { "rust": 2, "go": 2, "cpp": 1 }
+      },
+      {
+        "text": "Web components",
+        "points": { "react": 2, "vue": 1, "svelte": 1 }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Favorite development phase?",
+    "answers": [
+      {
+        "text": "Design & Planning",
+        "points": { "react": 1, "vue": 1, "angular": 2 }
+      },
+      {
+        "text": "Implementation",
+        "points": { "python": 2, "nodejs": 2, "go": 1 }
+      },
+      {
+        "text": "Optimization",
+        "points": { "rust": 2, "cpp": 2, "go": 1 }
+      },
+      {
+        "text": "Testing & QA",
+        "points": { "java": 2, "csharp": 1, "go": 1 }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Learning new tech approach?",
+    "answers": [
+      {
+        "text": "Official docs",
+        "points": { "rust": 2, "go": 2, "java": 1 }
+      },
+      {
+        "text": "Video tutorials",
+        "points": { "react": 2, "python": 1, "nodejs": 1 }
+      },
+      {
+        "text": "Code examples",
+        "points": { "nodejs": 2, "python": 2, "react": 1 }
+      },
+      {
+        "text": "Hands-on projects",
+        "points": { "rust": 1, "go": 1, "cpp": 2 }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Code organization style?",
+    "answers": [
+      {
+        "text": "Component-based",
+        "points": { "react": 2, "vue": 2, "angular": 1 }
+      },
+      {
+        "text": "Object-oriented",
+        "points": { "java": 2, "csharp": 2, "kotlin": 1 }
+      },
+      {
+        "text": "Functional",
+        "points": { "rust": 2, "go": 1, "python": 1 }
+      },
+      {
+        "text": "Modular",
+        "points": { "nodejs": 2, "python": 1, "go": 1 }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Debugging preference?",
+    "answers": [
+      {
+        "text": "Print statements",
+        "points": { "python": 2, "nodejs": 1, "php": 1 }
+      },
+      {
+        "text": "Debugger tools",
+        "points": { "java": 2, "csharp": 2, "cpp": 1 }
+      },
+      {
+        "text": "Log analysis",
+        "points": { "go": 2, "rust": 1, "java": 1 }
+      },
+      {
+        "text": "Browser DevTools",
+        "points": { "react": 2, "vue": 1, "nodejs": 1 }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Deployment preference?",
+    "answers": [
+      {
+        "text": "Static hosting",
+        "points": { "react": 2, "vue": 2, "svelte": 1 }
+      },
+      {
+        "text": "Container orchestration",
+        "points": { "go": 2, "java": 1, "nodejs": 1 }
+      },
+      {
+        "text": "Serverless functions",
+        "points": { "nodejs": 2, "python": 2, "go": 1 }
+      },
+      {
+        "text": "Traditional servers",
+        "points": { "java": 2, "php": 2, "python": 1 }
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Code review focus?",
+    "answers": [
+      {
+        "text": "Readability",
+        "points": { "python": 2, "go": 2, "react": 1 }
+      },
+      {
+        "text": "Performance",
+        "points": { "rust": 2, "cpp": 2, "go": 1 }
+      },
+      {
+        "text": "Architecture",
+        "points": { "java": 2, "csharp": 1, "kotlin": 1 }
+      },
+      {
+        "text": "Functionality",
+        "points": { "nodejs": 2, "python": 1, "react": 1 }
+      }
+    ]
+  }
+]
