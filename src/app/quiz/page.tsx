@@ -81,7 +81,7 @@ export default function Quiz() {
   const question = questions[currentQuestion];
 
   return (
-    <PageTransition className="w-full h-screen bg-[#1c1a5e] flex items-center justify-center">
+    <PageTransition className="w-full min-h-screen bg-[#1c1a5e] flex items-center justify-center px-4 py-8">
       <AnimatePresence mode="wait">
         <motion.div 
           key={currentQuestion}
@@ -89,15 +89,15 @@ export default function Quiz() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="w-[914px] flex flex-col items-start gap-[152px]"
+          className="w-full max-w-4xl flex flex-col items-center gap-8 md:gap-[152px]"
         >
           {/* Question Header */}
-          <div className="flex flex-col items-start gap-10 w-full">
+          <div className="flex flex-col items-center gap-6 md:gap-10 w-full">
             <motion.p 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="w-full text-center text-white/60 font-semibold text-xl tracking-normal leading-normal"
+              className="w-full text-center text-white/60 font-semibold text-lg md:text-xl tracking-normal leading-normal"
             >
               Question {currentQuestion + 1} out of {questions.length}
             </motion.p>
@@ -106,24 +106,24 @@ export default function Quiz() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="w-full text-center text-white font-semibold text-4xl tracking-normal leading-normal"
+              className="w-full text-center text-white font-semibold text-2xl md:text-4xl tracking-normal leading-normal px-4"
             >
               {question.question}
             </motion.div>
           </div>
 
           {/* Answer Options */}
-          <div className="flex flex-col items-end gap-10 w-full">
+          <div className="flex flex-col items-center gap-4 md:gap-10 w-full">
             {question.answers.map((answer, index) => (
               <motion.button
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + (index * 0.1), duration: 0.4 }}
+                transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
                 onClick={() => handleAnswer(answer)}
-                className="w-full bg-white rounded-[20px] flex items-center justify-center py-4 px-8 hover:bg-[#f8f9fa] hover:shadow-lg hover:scale-[1.02] transition-all duration-200 cursor-pointer min-h-[60px] border border-transparent hover:border-[#e9ecef]"
+                className="w-full max-w-2xl h-auto min-h-[60px] md:min-h-[72px] bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 rounded-[16px] md:rounded-[20px] px-6 md:px-8 py-4 md:py-6 flex items-center justify-center transition-all duration-300 cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
               >
-                <span className="text-[#0e0d2f] font-semibold text-xl tracking-normal leading-normal text-center whitespace-nowrap overflow-hidden text-ellipsis">
+                <span className="text-base md:text-lg font-medium text-white text-center relative z-10 leading-relaxed">
                   {answer.text}
                 </span>
               </motion.button>
