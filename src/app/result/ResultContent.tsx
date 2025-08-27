@@ -104,7 +104,7 @@ export default function ResultContent() {
           scale: 1.02,
           boxShadow: "0 30px 60px rgba(139, 92, 246, 0.4)"
         }}
-        className="relative w-full max-w-[90vw] sm:max-w-[600px] lg:max-w-[800px] mx-auto bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-xl rounded-[20px] overflow-hidden shadow-2xl border border-white/30 before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/10 before:to-blue-400/10 before:opacity-100 min-h-[500px] sm:min-h-[600px]"
+        className="relative w-full max-w-[90vw] sm:max-w-[600px] lg:max-w-[800px] mx-auto bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-xl rounded-[20px] overflow-hidden shadow-2xl border border-white/30 before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/10 before:to-blue-400/10 before:opacity-100 min-h-[550px] sm:min-h-[600px] lg:min-h-[650px]"
       >
         {/* Tech Stack Logo */}
         <div className="absolute top-6 sm:top-10 left-1/2 transform -translate-x-1/2 bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-lg rounded-full p-[8px] sm:p-[10px] inline-flex items-center justify-center gap-[10px] border border-white/30 shadow-lg">
@@ -141,12 +141,12 @@ export default function ResultContent() {
         </div>
 
         {/* Result Description */}
-        <div className="absolute top-[160px] sm:top-[190px] lg:top-[240px] left-4 right-4 sm:left-8 sm:right-8 text-[#1c1a5e99] font-normal text-sm sm:text-base lg:text-lg tracking-normal leading-normal text-center">
+        <div className="absolute top-[160px] sm:top-[200px] lg:top-[240px] left-4 right-4 sm:left-8 sm:right-8 text-[#1c1a5e99] font-normal text-sm sm:text-base lg:text-lg tracking-normal leading-relaxed text-center">
           {result.description}
         </div>
 
         {/* Traits Section */}
-        <div className="absolute top-[280px] sm:top-[320px] lg:top-[350px] left-4 right-4 sm:left-8 sm:right-8">
+        <div className="absolute top-[280px] sm:top-[320px] lg:top-[360px] left-4 right-4 sm:left-8 sm:right-8">
           <h3 className="text-sm sm:text-base font-semibold text-[#1c1a5e] mb-3 text-center">Your characteristics:</h3>
           <div className="flex flex-wrap justify-center gap-2 mb-4">
             {result.traits.map((trait, index) => (
@@ -161,7 +161,7 @@ export default function ResultContent() {
         </div>
 
         {/* Tech Stack Section */}
-        <div className="absolute top-[360px] sm:top-[400px] lg:top-[440px] left-4 right-4 sm:left-8 sm:right-8">
+        <div className="absolute top-[380px] sm:top-[420px] lg:top-[460px] left-4 right-4 sm:left-8 sm:right-8">
           <h3 className="text-sm sm:text-base font-semibold text-[#1c1a5e] mb-3 text-center">Recommended tech stack:</h3>
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             {result.techStack.map((tech, index) => (
