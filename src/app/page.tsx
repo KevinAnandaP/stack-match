@@ -63,117 +63,121 @@ export default function Home() {
         </div>
 
         {/* Tech stack logos grid */}
-        <div className="absolute top-[270px] sm:top-[300px] md:top-[380px] left-1/2 transform -translate-x-1/2 px-4">
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-5 md:gap-8 max-w-[320px] sm:max-w-md md:max-w-4xl mx-auto">
+        <div className="absolute top-[270px] sm:top-[300px] md:top-[380px] left-1/2 transform -translate-x-1/2 w-full px-4">
+          <div className="flex flex-col items-center justify-center space-y-3 sm:space-y-4 md:space-y-6 max-w-xs sm:max-w-md md:max-w-4xl mx-auto">
             {/* Row 1 */}
-            <motion.div 
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-              className="w-[96px] h-[85px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[14px] sm:rounded-[16px] md:rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
-            >
-              <Image
-                src="/react.png"
-                alt="React"
-                width={70}
-                height={70}
-                className="object-contain relative z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-[70px] md:h-[70px]"
-              />
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-              className="w-[96px] h-[85px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[14px] sm:rounded-[16px] md:rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
-            >
-              <Image
-                src="/python.png"
-                alt="Python"
-                width={70}
-                height={70}
-                className="object-contain relative z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-[70px] md:h-[70px]"
-              />
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-              className="w-[96px] h-[85px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[14px] sm:rounded-[16px] md:rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
-            >
-              <Image
-                src="/rust.svg"
-                alt="Rust"
-                width={70}
-                height={70}
-                className="object-contain relative z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-[70px] md:h-[70px]"
-              />
-            </motion.div>
+            <div className="flex items-center justify-center space-x-3 sm:space-x-4 md:space-x-8">
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="w-20 h-18 sm:w-24 sm:h-20 md:w-44 md:h-40 bg-gradient-to-br from-white/20 to-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+              >
+                <Image
+                  src="/react.png"
+                  alt="React"
+                  width={70}
+                  height={70}
+                  className="object-contain relative z-10 w-7 h-7 sm:w-9 sm:h-9 md:w-16 md:h-16"
+                />
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="w-20 h-18 sm:w-24 sm:h-20 md:w-44 md:h-40 bg-gradient-to-br from-white/20 to-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+              >
+                <Image
+                  src="/python.png"
+                  alt="Python"
+                  width={70}
+                  height={70}
+                  className="object-contain relative z-10 w-7 h-7 sm:w-9 sm:h-9 md:w-16 md:h-16"
+                />
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="w-20 h-18 sm:w-24 sm:h-20 md:w-44 md:h-40 bg-gradient-to-br from-white/20 to-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+              >
+                <Image
+                  src="/rust.svg"
+                  alt="Rust"
+                  width={70}
+                  height={70}
+                  className="object-contain relative z-10 w-7 h-7 sm:w-9 sm:h-9 md:w-16 md:h-16"
+                />
+              </motion.div>
+            </div>
 
             {/* Row 2 */}
-            <motion.div 
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-              className="w-[96px] h-[85px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[14px] sm:rounded-[16px] md:rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
-            >
-              <Image
-                src="/java.png"
-                alt="Java"
-                width={70}
-                height={70}
-                className="object-contain relative z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-[70px] md:h-[70px]"
-              />
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-              className="w-[96px] h-[85px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[14px] sm:rounded-[16px] md:rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
-            >
-              <Image
-                src="/golang.svg"
-                alt="Go"
-                width={70}
-                height={70}
-                className="object-contain relative z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-[70px] md:h-[70px]"
-              />
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
-              }}
-              transition={{ duration: 0.3 }}
-              className="w-[96px] h-[85px] sm:w-[120px] sm:h-[100px] md:w-[180px] md:h-[160px] bg-gradient-to-br from-white/20 to-white/10 rounded-[14px] sm:rounded-[16px] md:rounded-[24px] flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
-            >
-              <Image
-                src="/nodejs.png"
-                alt="Node.js"
-                width={70}
-                height={70}
-                className="object-contain relative z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-[70px] md:h-[70px]"
-              />
-            </motion.div>
+            <div className="flex items-center justify-center space-x-3 sm:space-x-4 md:space-x-8">
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="w-20 h-18 sm:w-24 sm:h-20 md:w-44 md:h-40 bg-gradient-to-br from-white/20 to-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+              >
+                <Image
+                  src="/java.png"
+                  alt="Java"
+                  width={70}
+                  height={70}
+                  className="object-contain relative z-10 w-7 h-7 sm:w-9 sm:h-9 md:w-16 md:h-16"
+                />
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="w-20 h-18 sm:w-24 sm:h-20 md:w-44 md:h-40 bg-gradient-to-br from-white/20 to-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+              >
+                <Image
+                  src="/golang.svg"
+                  alt="Go"
+                  width={70}
+                  height={70}
+                  className="object-contain relative z-10 w-7 h-7 sm:w-9 sm:h-9 md:w-16 md:h-16"
+                />
+              </motion.div>
+              
+              <motion.div 
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="w-20 h-18 sm:w-24 sm:h-20 md:w-44 md:h-40 bg-gradient-to-br from-white/20 to-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg backdrop-blur-md border border-white/30 hover:border-white/50 hover:bg-gradient-to-br hover:from-white/30 hover:to-white/20 transition-all cursor-pointer relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-400/20 before:to-blue-400/20 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+              >
+                <Image
+                  src="/nodejs.png"
+                  alt="Node.js"
+                  width={70}
+                  height={70}
+                  className="object-contain relative z-10 w-7 h-7 sm:w-9 sm:h-9 md:w-16 md:h-16"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
 
